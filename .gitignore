@@ -3,3 +3,4 @@ pylibvw.o
 pylibvw.so
 .idea/*.xml
 .idea/vowpal_wabbit_experments.iml
+*.pyc
