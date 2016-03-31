@@ -258,6 +258,13 @@ def test(sequenceLabeler, query):
         print "ERROR in prediction"
         return []
 
+def query(sequenceLabeler, query):
+    try:
+        pred = sequenceLabeler.predict([(0, w) for w in query.split()])
+        chunked = chunk(zip(query.split(), pred))
+        return chunked
+    except:
+        return []
 
 def test1(sequenceLabeler):
     # now see the predictions on a test sentence
